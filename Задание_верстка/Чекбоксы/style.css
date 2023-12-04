@@ -1,3 +1,7 @@
+body {
+    font-family: 'Rosnou', sans-serif;
+}
+
 .checkbox-container {
     margin: 5px;
     display: flex;
@@ -70,6 +74,7 @@
 }
 
 .checkbox-text {
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 100;
     user-select: none;
 }
