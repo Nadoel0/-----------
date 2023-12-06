@@ -1,0 +1,55 @@
+.timer-start-container {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.timer-container {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer-input {
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: transparent;
+    text-align: center;
+}
+
+.timer-button {
+    border: 1px solid #1f2029;
+    background-color: #1f2029;
+    color: white;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.timer-button:hover {
+    box-shadow: 0px 0px 5px #1f2029;
+}
+
+.timer-button:active {
+    box-shadow: 0px 0px 0px;
+}
+
+.timer-icon {
+    width: 100px;
+    height: 100px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.timer-path {
+    width: 100px;
+    height: 100px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #1f2029;
+}
+
+.timer {
+    font-size: 20px;
+}
