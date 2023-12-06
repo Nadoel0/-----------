@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="/Fontы/styleFonts.css">
+    <title>Форма</title>
+</head>
+
+<body>
+    <div class="modal-button">
+        <button>Открыть форму</button>
+    </div>
+
+    <div class="modal-space">
+        <div class="modal-form">
+            <form class="custom-form">
+                <div class="form-header">
+                    <p>Достижениe</p>
+                    <button class="close-modal">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M23.6618 8.36183C24.085 8.78498 24.085 9.47104 23.6618 9.89419L17.5324 16.0237L23.6618 22.1531C24.085 22.5763 24.085 23.2623 23.6618 23.6855C23.2387 24.1086 22.5526 24.1086 22.1295 23.6855L16 17.556L9.87054 23.6855C9.44739 24.1086 8.76133 24.1086 8.33818 23.6855C7.91503 23.2623 7.91503 22.5763 8.33818 22.1531L14.4676 16.0237L8.33818 9.89419C7.91503 9.47104 7.91503 8.78498 8.33818 8.36183C8.76133 7.93868 9.44739 7.93868 9.87054 8.36183L16 14.4913L22.1295 8.36183C22.5526 7.93868 23.2387 7.93868 23.6618 8.36183Z"
+                                fill="#ABBCD1" />
+                        </svg>
+
+                    </button>
+                </div>
+
+                <label for="selectAchievement">ТИП ДОСТИЖЕНИЯ:</label>
+                <select id="selectAchievement">
+                    <option value="academic">Академическая мобильность</option>
+                    <option value="startup">Стартап</option>
+                </select>
+
+                <div id="academicFields" class=" field">
+                    <label for="studyInput">ГДЕ ПРОХОДИЛИ ОБУЧЕНИЕ:</label>
+                    <input id="studyInput" type="text" placeholder="Введите название организации" />
+
+                    <label for="disciplineInput">ИЗУЧАЕМЫЕ ДИСЦИПЛИНЫ:</label>
+                    <input id="disciplineInput" type="text" placeholder="Перечислите через запятую" />
+
+                    <label for="hoursInput">КОЛИЧЕСТВО ЧАСОВ:</label>
+                    <input id="hoursInput" type="number" placeholder="36" />
+
+                    <label>СРОКИ ОБУЧЕНИЯ:</label>
+                    <div class="date-input-container">
+                        <input id="startDateInput" type="text" placeholder="ДД/ММ/ГГГГ" />
+                        <p>&#8722;</p>
+                        <input id="endDateInput" type="text" placeholder="ДД/ММ/ГГГГ" />
+                    </div>
+
+                    <label for="fileInput1">ПОДТВЕРЖДАЮЩИЕ ДОКУМЕНТЫ:</label>
+                    <input id="fileInput1" type="file" />
+                </div>
+
+                <div id="startupFields" class="hidden">
+                    <label for="startupInput">НАЗВАНИЕ СТАРТАПА:</label>
+                    <input id="startupInput" type="text" placeholder="Введите название стартапа" />
+
+                    <label for="jobInput">КРАТКОЕ ОПИСАНИЕ РАБОТЫ:</label>
+                    <textarea id="jobInput">Опишите основную идею Вашего стартапа</textarea>
+
+                    <label for="linkInput">ССЫЛКА (НЕОБЯЗАТЕЛЬНО):</label>
+                    <input id="linkInput" type="text" placeholder="Введите ссылку на информацию о Вашем стартапе" />
+
+                    <label for="linkAddInput">ОПИСАНИЕ ССЫЛКА (НЕОБЯЗАТЕЛЬНО):</label>
+                    <input id="linkAddInput" type="text" placeholder="например: Сайт стартапа" />
+
+                    <label for="fileInput2">ПОДТВЕРЖДАЮЩИЕ ДОКУМЕНТЫ:</label>
+                    <input id="fileInput2" type="file" />
+                </div>
+
+                <div class="buttons-container">
+                    <button id="closeButton">Закрыть</button>
+                    <button id="saveButton">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
