@@ -18,6 +18,8 @@ function startTimer() {
   timerLeft = duration;
 
   timer = setInterval(updateTimer, 1000);
+
+  hoursElement.value = '';
 }
 
 function updateTimer() {
