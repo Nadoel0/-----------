@@ -1,16 +1,25 @@
 @media only screen and (max-width: 300px) {
     .sec-standard-text {
-        font-size: 10px;
+        font-size: 11px !important;
     }
-    
-    .standard-text, p {
-        font-size: 12px;
+
+    .standard-text,
+    p,
+    .mounth {
+        font-size: 13px !important;
+    }
+
+    .add-info-card-container {
+        margin-top: 15px !important;
+    }
+
+    .education-card-container {
+        margin-top: 0px !important;
     }
 }
 
 body {
     font-family: 'Rosnou', sans-serif;
-    font-weight: 400;
 }
 
 .card-container {
@@ -26,7 +35,6 @@ body {
     display: flex;
     margin-bottom: 14px;
     align-items: center;
-    justify-content: space-between;
 }
 
 .button-edit {
@@ -36,14 +44,17 @@ body {
 
 .education-card-container {
     display: inline-block;
+    margin-top: 10px;
 }
 
 .add-info-card-container {
-    margin: 20px 0 20px 0;
+    margin-top: 20px;
 }
 
-.standard-text, .sec-standard-text, p {
-    margin: 6px;
+.standard-text,
+.sec-standard-text,
+p {
+    margin: 3px;
 }
 
 .sec-standard-text {
@@ -51,7 +62,23 @@ body {
     color: #ABBCD1;
 }
 
-.standard-text, p {
-    font-size: 16px;
+.standard-text,
+p {
+    font-size: 17px;
     color: #1B334D;
+}
+
+.mounth {
+    font-size: 17px;
+}
+
+.date-text-container {
+    width: 100%;
+}
+
+.date-button-edit-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
