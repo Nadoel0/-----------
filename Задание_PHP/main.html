@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Форма отрпавки</title>
+</head>
+
+<body>
+    <div class="modal-overlay">
+        <div class="player-info-form">
+            <h1>Личные данные</h1>
+
+            <div class="form-field">
+                <label for="nicknameInput">Никнейм в WoW</label>
+                <input id="nicknameInput" type="text" placeholder="Введите ваш ник в WOW" />
+            </div>
+
+            <div class="form-field">
+                <label for="raceInput">Ваша сторона</label>
+                <input id="raceInput" type="text" placeholder="За Альянс/Орду" />
+            </div>
+
+            <div class="form-field">
+                <label for="characterClassInput">Класс персонажа</label>
+                <input id="characterClassInput" type="text" placeholder="Введите класс персонажа" />
+            </div>
+
+            <div class="form-field">
+                <label>Ваш уровень</label>
+                <input id="levelInput" type="number" placeholder="12" />
+            </div>
+
+            <div class="button-container">
+                <button id="closeFormButton" type="button">Закрыть</button>
+                <button id="saveFormButton" type="button">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-cards-container"></div>
+
+    <div class="create-card-button">
+        <button id="createCardButton" type="button">Добавить карточку</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
