@@ -3,7 +3,7 @@ $(document).ready(function () {
   const modalOverlay = $(".modal-overlay");
   const closeButton = $("#closeFormButton");
   const saveButton = $("#saveFormButton");
-  const profileCard = $(".profile-card-container");
+  const profileCard = $(".profile-cards-container");
   const nicknameInput = $("#nicknameInput");
   const raceInput = $("#raceInput");
   const characterClassInput = $("#characterClassInput");
@@ -29,7 +29,7 @@ $(document).ready(function () {
     let data = {
         nickname: nickname,
         race: race,
-        charachterClass: characterClass,
+        characterClass: characterClass,
         level: level
     }
 
@@ -44,10 +44,12 @@ $(document).ready(function () {
       success: function (response) {
         console.log("Данные отправлены на сервер", response);
 
-        let cardData = `<h4>${response.nickname}}</h4>
-        <p class="card-info">Ваша сторона: ${response.race}</p>
-        <p class="card-info">Ваш класс: ${response.characterClass}</p>
-        <p class="card-info">Ваш уровень: ${response.level}</p>`;
+        let cardData = `<div class="character-card-container">
+            <h2>${response.data.nickname}</h2>
+            <p class="card-info">Ваша сторона: ${response.data.race}</p>
+            <p class="card-info">Ваш класс: ${response.data.characterClass}</p>
+            <p class="card-info">Ваш уровень: ${response.data.level}</p>
+            </div>`;
 
         profileCard.append(cardData);
         closeModal();
