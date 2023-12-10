@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Rosnou', sans-serif;
+    font-family: 'Rosnou', sans-serif !important;
 }
 
 .card-container {
