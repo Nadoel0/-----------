@@ -96,7 +96,9 @@ label {
     display: none;
 }
 
-select, input, textarea {
+select,
+input,
+textarea {
     padding: 8px 8px 8px 16px;
     font-size: 14px;
     font-weight: 16px;
@@ -104,10 +106,13 @@ select, input, textarea {
     border: 1px solid #D5E3F0;
     color: #1B334D;
     user-select: none;
+    font-family: 'Rosnou', sans-serif;
 }
 
-::placeholder, textarea {
+::placeholder,
+textarea {
     color: #ABBCD1;
+    font-family: 'Rosnou', sans-serif;
 }
 
 textarea {
@@ -155,9 +160,10 @@ textarea {
     background-color: transparent;
     padding: 8px 16px;
     height: 40px;
-    flex: 1 0 0 ;
+    flex: 1 0 0;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Rosnou', sans-serif;
 }
 
 #saveModalButton {
