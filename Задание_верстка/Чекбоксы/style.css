@@ -1,3 +1,10 @@
+/*@font-face {*/
+/*    font-family: 'Rosnou';*/
+/*    src: url('/Fonts/fonts/Rosnou.ttf') format('truetype');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+
 body {
     font-family: 'Rosnou', sans-serif !important;
     font-size: 16px;
@@ -44,8 +51,9 @@ body {
 }
 
 .custom-checkbox-container:focus-within .custom-checkbox{
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 2px #D5E3F0;
+    background-color: #F8F9FB;
+    border: 1px solid #D5E3F0;
+    box-shadow: 0 0 4px 1px rgba(0, 102, 175, 0.60);
 }
 
 .hidden-checkbox:checked + .custom-checkbox .checkbox-icon-checked {
@@ -57,16 +65,16 @@ body {
     background-color: #FEF7F8;
 }
 
-.custom-checkbox-container.error .checkbox-text {
+.custom-checkbox-container.error .checkbox-label {
     color: #EC6A71;
 }
 
-.custom-checkbox-container.disabled .custom-checkbox {
-    background-color: #D5E3F0;
+.custom-checkbox-container input:disabled + .custom-checkbox {
     border: 1px solid #ABBCD1;
+    background: #D5E3F0;
 }
 
-.custom-checkbox-container.disabled-off .checkbox-text {
+.custom-checkbox-container.disabled-off .checkbox-label {
     color: #ABBCD1;
 }
 
@@ -75,7 +83,9 @@ body {
 }
 
 .checkbox-label {
+    color: #1B334D;
     font-size: 12px;
     font-weight: 100;
     user-select: none;
+    line-height: 24px;
 }
