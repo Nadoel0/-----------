@@ -5,105 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
-<!--    <link rel="stylesheet" type="text/css" href="/Fonts/styleFonts.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="/Fonts/styleFonts.css">-->
     <title>Форма</title>
 </head>
 
 <body>
-    <div class="modal-trigger">
-        <button id="openModalButton" type="button">Открыть форму</button>
-    </div>
+<div class="modal-trigger">
+    <button id="openModalButton" type="button">Открыть форму</button>
+</div>
 
-    <div class="modal-overlay" id="modalSpace">
-        <div class="modal-content">
-            <form class="achievement-form">
-                <div class="form-title">
-                    <h1>Достижениe</h1>
-                    <button id="closeModal" type="button">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M23.6618 8.36183C24.085 8.78498 24.085 9.47104 23.6618 9.89419L17.5324 16.0237L23.6618 22.1531C24.085 22.5763 24.085 23.2623 23.6618 23.6855C23.2387 24.1086 22.5526 24.1086 22.1295 23.6855L16 17.556L9.87054 23.6855C9.44739 24.1086 8.76133 24.1086 8.33818 23.6855C7.91503 23.2623 7.91503 22.5763 8.33818 22.1531L14.4676 16.0237L8.33818 9.89419C7.91503 9.47104 7.91503 8.78498 8.33818 8.36183C8.76133 7.93868 9.44739 7.93868 9.87054 8.36183L16 14.4913L22.1295 8.36183C22.5526 7.93868 23.2387 7.93868 23.6618 8.36183Z"
-                                fill="#ABBCD1" />
-                        </svg>
-                    </button>
+<div class="modal-overlay" id="modalSpace">
+    <div class="modal-content">
+        <form class="achievement-form">
+            <div class="form-title">
+                <h1>Достижениe</h1>
+                <button id="closeModal" class="close-modal" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M23.6618 8.36183C24.085 8.78498 24.085 9.47104 23.6618 9.89419L17.5324 16.0237L23.6618 22.1531C24.085 22.5763 24.085 23.2623 23.6618 23.6855C23.2387 24.1086 22.5526 24.1086 22.1295 23.6855L16 17.556L9.87054 23.6855C9.44739 24.1086 8.76133 24.1086 8.33818 23.6855C7.91503 23.2623 7.91503 22.5763 8.33818 22.1531L14.4676 16.0237L8.33818 9.89419C7.91503 9.47104 7.91503 8.78498 8.33818 8.36183C8.76133 7.93868 9.44739 7.93868 9.87054 8.36183L16 14.4913L22.1295 8.36183C22.5526 7.93868 23.2387 7.93868 23.6618 8.36183Z"
+                              fill="#ABBCD1"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="form-field">
+                <label for="selectAchievement">ТИП ДОСТИЖЕНИЯ:</label>
+                <select id="selectAchievement">
+                    <option value="" selected disabled></option>
+                    <option value="academic">Академическая мобильность</option>
+                    <option value="startup">Стартап</option>
+                </select>
+            </div>
+
+            <div id="academicFields" class="hidden field">
+                <div class="form-field">
+                    <label for="studyInput">ГДЕ ПРОХОДИЛИ ОБУЧЕНИЕ:</label>
+                    <input id="studyInput" type="text" placeholder="Введите название организации"/>
                 </div>
 
                 <div class="form-field">
-                    <label for="selectAchievement">ТИП ДОСТИЖЕНИЯ:</label>
-                    <select id="selectAchievement">
-                        <option value="" selected disabled>Выберите...</option>
-                        <option value="academic">Академическая мобильность</option>
-                        <option value="startup">Стартап</option>
-                    </select>
+                    <label for="disciplineInput">ИЗУЧАЕМЫЕ ДИСЦИПЛИНЫ:</label>
+                    <input id="disciplineInput" type="text" placeholder="Перечислите через запятую"/>
                 </div>
 
-                <div id="academicFields" class="hidden field">
-                    <div class="form-field">
-                        <label for="studyInput">ГДЕ ПРОХОДИЛИ ОБУЧЕНИЕ:</label>
-                        <input id="studyInput" type="text" placeholder="Введите название организации" />
-                    </div>
-
-                    <div class="form-field">
-                        <label for="disciplineInput">ИЗУЧАЕМЫЕ ДИСЦИПЛИНЫ:</label>
-                        <input id="disciplineInput" type="text" placeholder="Перечислите через запятую" />
-                    </div>
-
-                    <div class="form-field">
-                        <label for="hoursInput">КОЛИЧЕСТВО ЧАСОВ:</label>
-                        <input id="hoursInput" type="number" placeholder="36" />
-                    </div>
-
-                    <div class="form-field">
-                        <label>СРОКИ ОБУЧЕНИЯ:</label>
-                        <div class="date-inputs">
-                            <input id="startDateInput" type="text" placeholder="ДД/ММ/ГГГГ" />
-                            <p>&#8722;</p>
-                            <input id="endDateInput" type="text" placeholder="ДД/ММ/ГГГГ" />
-                        </div>
-                    </div>
+                <div class="form-field">
+                    <label for="hoursInput">КОЛИЧЕСТВО ЧАСОВ:</label>
+                    <input id="hoursInput" type="number" placeholder="36"/>
                 </div>
 
-                <div id="startupFields" class="hidden field">
-                    <div class="form-field">
-                        <label for="startupInput">НАЗВАНИЕ СТАРТАПА:</label>
-                        <input id="startupInput" type="text" />
-                    </div>
-
-                    <div class="form-field">
-                        <label for="jobInput">КРАТКОЕ ОПИСАНИЕ РАБОТЫ:</label>
-                        <textarea id="jobInput" placeholder="Опишите основную идею Вашего стартапа"></textarea>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="linkInput">ССЫЛКА (НЕОБЯЗАТЕЛЬНО):</label>
-                        <input id="linkInput" type="text" placeholder="Введите ссылку на информацию о Вашем стартапе" />
-                    </div>
-
-                    <div class="form-field">
-                        <label for="linkAddInput">ОПИСАНИЕ ССЫЛКА (НЕОБЯЗАТЕЛЬНО):</label>
-                        <input id="linkAddInput" type="text" placeholder="Например: Сайт стартапа" />
-                        <div class="additional-link">
-                            <button id="addLinkButton" type="button">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M12 2C12.5523 2 13 2.44772 13 3V11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H13V21C13 21.5523 12.5523 22 12 22C11.4477 22 11 21.5523 11 21V13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H11V3C11 2.44772 11.4477 2 12 2Z"
-                                        fill="#2699D4" />
-                                </svg>
-                                Добавить ссылку</button>
-                        </div>
+                <div class="form-field">
+                    <label>СРОКИ ОБУЧЕНИЯ:</label>
+                    <div class="date-inputs">
+                        <input id="startDateInput" type="text" placeholder="ДД/ММ/ГГГГ"/>
+                        <p>&#8722;</p>
+                        <input id="endDateInput" type="text" placeholder="ДД/ММ/ГГГГ"/>
                     </div>
                 </div>
+            </div>
 
-                <div class="form-buttons">
-                    <button id="closeModalButton" type="button">Закрыть</button>
-                    <button id="saveModalButton" type="button">Сохранить</button>
+            <div id="startupFields" class="hidden field">
+                <div class="form-field">
+                    <label for="startupInput">НАЗВАНИЕ СТАРТАПА:</label>
+                    <input id="startupInput" type="text"/>
                 </div>
-            </form>
-        </div>
+
+                <div class="form-field">
+                    <label for="jobInput">КРАТКОЕ ОПИСАНИЕ РАБОТЫ:</label>
+                    <textarea id="jobInput" placeholder="Опишите основную идею Вашего стартапа"></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="linkInput">ССЫЛКА (НЕОБЯЗАТЕЛЬНО):</label>
+                    <input id="linkInput" type="text" placeholder="Введите ссылку на информацию о Вашем стартапе"/>
+                </div>
+
+                <div class="form-field">
+                    <label for="linkAddInput">ОПИСАНИЕ ССЫЛКА (НЕОБЯЗАТЕЛЬНО):</label>
+                    <input id="linkAddInput" type="text" placeholder="Например: Сайт стартапа"/>
+                    <div class="additional-link">
+                        <button id="addLinkButton" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M12 2C12.5523 2 13 2.44772 13 3V11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H13V21C13 21.5523 12.5523 22 12 22C11.4477 22 11 21.5523 11 21V13H3C2.44772 13 2 12.5523 2 12C2 11.4477 2.44772 11 3 11H11V3C11 2.44772 11.4477 2 12 2Z"
+                                      fill="#2699D4"/>
+                            </svg>
+                            Добавить ссылку
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button id="closeModalButton" class="close-modal-button" type="button">Закрыть</button>
+                <button id="saveModalButton" class="save-modal-button" type="button">Сохранить</button>
+            </div>
+        </form>
     </div>
+</div>
 
-    <script src="./script.js"></script>
+<script src="./script.js"></script>
 </body>
 
 </html>
