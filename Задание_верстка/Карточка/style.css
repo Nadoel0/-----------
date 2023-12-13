@@ -1,76 +1,110 @@
-@media only screen and (max-width: 300px) {
-    .sec-standard-text {
-        font-size: 11px !important;
+@font-face {
+    font-family: 'Rosnou';
+    src: url('/Fonts/fonts/Rosnou.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (max-width: 700px) {
+    .experience-card {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                'date-section edit-section'
+                'job-details job-details';
     }
 
-    .standard-text,
-    p,
-    .mounth {
+    .date-section {
+        width: auto !important;
+        border-right: none !important;
+        grid-area: date-section;
+    }
+
+    .job-details {
+        grid-area: job-details;
+    }
+
+    .edit-section {
+        grid-area: edit-section;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .experience-card {
+        font-size: 12px !important;
+        /*gap: 12px !important;*/
+        line-height: 16px !important;
+    }
+
+    .font-bold {
         font-size: 14px !important;
     }
 }
 
 body {
     font-family: 'Rosnou', sans-serif !important;
+    background-color: whitesmoke;
 }
 
-.card-container {
-    max-width: 700px;
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 24px;
-    margin: 10px;
-    overflow: auto;
-}
-
-.date-card-container {
+.experience-card {
     display: flex;
-    margin-bottom: 14px;
+    max-width: 835px;
+    padding: 24px;
+    margin-bottom: 12px;
+    gap: 24px;
+    border-radius: 10px;
+    background-color: #FFF;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 24px;
+}
+
+.date-section {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    padding-right: 24px;
+    gap: 4px;
+    align-items: flex-start;
+    border-right: 1px solid #D5E3F0;
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.job-details ul {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    padding-left: 25px;
+}
+
+.button-wrapper {
+    display: flex;
+    padding: 4px;
+    justify-content: center;
     align-items: center;
 }
 
-.button-edit {
+.edit-button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
-.education-card-container {
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.add-info-card-container {
-    margin-top: 20px;
-}
-
-.standard-text,
-.sec-standard-text,
-p {
-    margin: 3px;
-}
-
-.sec-standard-text {
-    font-size: 14px;
-    color: #ABBCD1;
-}
-
-.standard-text,
-p {
-    font-size: 17px;
+.standard-text-color {
     color: #1B334D;
 }
 
-.mounth {
-    font-size: 17px;
+.secondary-text-color {
+    color: #ABBCD1;
 }
 
-.date-text-container {
-    width: 100%;
-}
-
-.date-button-edit-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.font-bold {
+    font-weight: 500;
+    font-size: 18px;
 }

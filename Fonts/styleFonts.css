@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Rosnou';
-  src:  url('./fonts/Rosnou.eot?txake4');
-  src:  url('./fonts/Rosnou.eot?txake4#iefix') format('embedded-opentype'),
-    url('./fonts/Rosnou.ttf?txake4') format('truetype'),
-    url('./fonts/Rosnou.woff?txake4') format('woff'),
-    url('./fonts/Rosnou.svg?txake4#Rosnou') format('svg');
+  src:  url('/Fonts/fonts/Rosnou.eot?txake4');
+  src:  url('/Fonts/fonts/Rosnou.eot?txake4#iefix') format('embedded-opentype'),
+    url('/Fonts/fonts/Rosnou.ttf?txake4') format('truetype'),
+    url('/Fonts/fonts/Rosnou.woff?txake4') format('woff'),
+    url('/Fonts/fonts/Rosnou.svg?txake4#Rosnou') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
