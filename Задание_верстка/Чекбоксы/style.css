@@ -1,9 +1,9 @@
-/*@font-face {*/
-/*    font-family: 'Rosnou';*/
-/*    src: url('/Fonts/fonts/Rosnou.ttf') format('truetype');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*}*/
+@font-face {
+    font-family: 'Rosnou';
+    src: url('/Fonts/fonts/Rosnou.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     font-family: 'Rosnou', sans-serif !important;
